@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmen2">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.librarynavigation059.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/fragmen1"
+        android:name="com.example.librarynavigation059.Fragmen1"
+        android:label="fragment_fragmen1"
+        tools:layout="@layout/fragment_fragmen1" >
+        <action
+            android:id="@+id/action_fragmen1_to_mainActivity2"
+            app:destination="@id/mainActivity2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmen2"
+        android:name="com.example.librarynavigation059.Fragmen2"
+        android:label="fragment_fragmen2"
+        tools:layout="@layout/fragment_fragmen2" >
+        <action
+            android:id="@+id/action_fragmen2_to_mainActivity"
+            app:destination="@id/mainActivity" />
+        <action
+            android:id="@+id/action_fragmen2_to_fragmen1"
+            app:destination="@id/fragmen1" />
+        <action
+            android:id="@+id/action_fragmen2_to_frgment3"
+            app:destination="@id/frgment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/frgment3"
+        android:name="com.example.librarynavigation059.Frgment3"
+        android:label="fragment_frgment3"
+        tools:layout="@layout/fragment_frgment3" />
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.librarynavigation059.MainActivity2"
+        android:label="activity_main2"
+        tools:layout="@layout/activity_main2" />
+</navigation>
